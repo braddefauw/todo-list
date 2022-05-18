@@ -15,3 +15,18 @@ console.log(dates.sort(compareAsc));
 //   Mon Jul 10 1989 00:00:00,
 //   Sun Jul 02 1995 00:00:00
 // ]
+
+const icon = document.querySelector(".icon");
+const header = document.querySelector(".header");
+const background = document.querySelector(".background");
+icon.addEventListener("click", function(){
+  if(icon.src = "./images/icon-sun.svg"){
+    header.classList.toggle("light-header");
+    background.classList.toggle("light-background");
+  }
+  if(header.classList.contains("light-header")){
+    icon.src = "./images/icon-moon.svg";
+  }else{
+    icon.src = "./images/icon-sun.svg";
+  }
+})
