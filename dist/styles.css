@@ -10,6 +10,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .header {
@@ -41,10 +42,20 @@ body {
 
 #text{
     position: absolute;
-    top: 25%;
+    top: 50%;
     left: 50%;
     font-size: 50px;
     color: white;
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
+}
+
+.text-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    margin-left: auto;
 }
