@@ -19,8 +19,8 @@ console.log(dates.sort(compareAsc));
 const icon = document.querySelector(".icon");
 const header = document.querySelector(".header");
 const background = document.querySelector(".background");
-const overlay = document.querySelector('.overlay');
-const text = document.querySelector('.text');
+const overlay = document.querySelector('.overlay-todo');
+const text = document.querySelector('.new-todo-text');
 icon.addEventListener("click", function(){
   if(icon.src = "./images/icon-sun.svg"){
     header.classList.toggle("light-header");
