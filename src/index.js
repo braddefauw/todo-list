@@ -1,4 +1,4 @@
-console.log("this is working still!");
+console.log("this is working still");
 import { compareAsc, format } from 'date-fns'
 
 format(new Date(2014, 1, 11), 'yyyy-MM-dd')
@@ -19,10 +19,14 @@ console.log(dates.sort(compareAsc));
 const icon = document.querySelector(".icon");
 const header = document.querySelector(".header");
 const background = document.querySelector(".background");
+const overlay = document.querySelector('.overlay');
+const text = document.querySelector('.text');
 icon.addEventListener("click", function(){
   if(icon.src = "./images/icon-sun.svg"){
     header.classList.toggle("light-header");
     background.classList.toggle("light-background");
+    overlay.classList.toggle("light-overlay");
+    text.classList.toggle("light-text");
   }
   if(header.classList.contains("light-header")){
     icon.src = "./images/icon-moon.svg";
