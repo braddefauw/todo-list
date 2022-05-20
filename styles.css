@@ -54,14 +54,17 @@ body {
     height: 100%;
 }
 
-.sidebar h3 {
+.dates, .projects {
     margin: 0;
     padding: 1rem;
-    margin-left: 1rem;
+}
+
+.dates h3, .projects h1, .projects h4 {
+    padding: 0.5rem;
 }
 
 #home {
-    padding-top: 3rem;
+    padding-top: 1rem;
 }
 
 .overlay-todo {
