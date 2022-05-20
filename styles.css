@@ -109,10 +109,33 @@ body {
 
 .new-todo-text > * {
     margin-right: 1rem;
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    background: none;
+    border: none;
+    color: lightgray;
 }
 
 #todo-input {
     margin-left: 1rem;
+}
+
+#todo-input::placeholder {
+    color: lightgray;
+}
+
+#submit, #cancel {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+#submit {
+    background: green;
+}
+
+#cancel {
+    background: red;
 }
 
 .icon {
