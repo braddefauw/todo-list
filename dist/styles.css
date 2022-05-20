@@ -14,14 +14,14 @@ body {
 }
 
 .header {
-    height: 40%;
+    height: 20%;
     background-image: url('./images/bg-desktop-dark.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .background {
-    height: 60%;
+    height: 680%;
     background: black;
     color: white;
 }
@@ -32,7 +32,7 @@ body {
     align-items: center;
     width: 50%;
     height: 10%;
-    top: 12.5%;
+    top: 5%;
     left: 25%;
     right: 0;
     bottom: 0;
@@ -44,7 +44,7 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     width: 100%;
 }
 
@@ -84,7 +84,7 @@ body {
 }
 
 .light-background {
-    background: white;
+    background: hsl(0, 0%, 98%)
 }
 
 .light-overlay {
