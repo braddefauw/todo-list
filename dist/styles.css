@@ -21,7 +21,7 @@ body {
 }
 
 .background {
-    height: 680%;
+    height: 80%;
     background: black;
     color: white;
 }
@@ -48,6 +48,22 @@ body {
     width: 100%;
 }
 
+.sidebar {
+    background-color: rgba(77, 80, 102, 0.5);
+    width: 20%;
+    height: 100%;
+}
+
+.sidebar h3 {
+    margin: 0;
+    padding: 1rem;
+    margin-left: 1rem;
+}
+
+#home {
+    padding-top: 3rem;
+}
+
 .overlay-todo {
     position: fixed; /* Sit on top of the page content */
     display: flex;
@@ -55,7 +71,7 @@ body {
     width: 50%;
     height: 10%;
     top: 25%;
-    left: 25%;
+    left: 37.5%;
     right: 0;
     bottom: 0;
     background-color: rgba(77, 80, 102, 0.5);
