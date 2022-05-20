@@ -34,3 +34,5 @@ icon.addEventListener("click", function(){
     icon.src = "./images/icon-sun.svg";
   }
 })
+
+document.getElementById('todo-date').value = new Date().toDateInputValue();
