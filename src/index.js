@@ -18,15 +18,13 @@ console.log(dates.sort(compareAsc));
 
 const icon = document.querySelector(".icon");
 const header = document.querySelector(".header");
-const background = document.querySelector(".background");
-const overlay = document.querySelector('.overlay-todo');
-const text = document.querySelector('.new-todo-text');
+const background = document.querySelector(".main-content");
+const overlay = document.querySelector('.new-todo-text');
 icon.addEventListener("click", function(){
   if(icon.src = "./images/icon-sun.svg"){
     header.classList.toggle("light-header");
     background.classList.toggle("light-background");
     overlay.classList.toggle("light-overlay");
-    text.classList.toggle("light-text");
   }
   if(header.classList.contains("light-header")){
     icon.src = "./images/icon-moon.svg";
