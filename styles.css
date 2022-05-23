@@ -76,21 +76,6 @@ body {
     padding-top: 1rem;
 }
 
-.overlay-todo {
-    position: fixed; /* Sit on top of the page content */
-    display: flex;
-    align-items: center;
-    width: 50%;
-    height: 10%;
-    top: 25%;
-    left: 37.5%;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(77, 80, 102, 0.5);
-    z-index: 2;
-    border-radius: 0.5rem;
-}
-
 .new-todo {
     width: 60%;
     height: 10%;
@@ -156,6 +141,20 @@ body {
 .icon {
     margin-left: auto;
     cursor: pointer;
+}
+
+.todo-list {
+    width: 60%;
+    background: rgba(77, 80, 102, 0.5);
+    margin-top: 5%;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-item {
+    border-bottom: 1px solid gray;
+    color: lightgray;
 }
 
 /* light mode */
