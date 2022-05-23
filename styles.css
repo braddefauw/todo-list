@@ -92,7 +92,7 @@ body {
 }
 
 .new-todo {
-    width: 50%;
+    width: 60%;
     height: 10%;
     background: rgba(77, 80, 102, 0.5);
     margin-top: 5%;
@@ -121,6 +121,7 @@ body {
 
 #todo-input {
     margin-left: 1rem;
+    width: 300px;
 }
 
 #todo-input::placeholder {
