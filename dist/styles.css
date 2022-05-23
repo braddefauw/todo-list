@@ -21,7 +21,7 @@ body {
 }
 
 .background {
-    height: 80%;
+    height: 70%;
     color: white;
     display: flex;
 }
@@ -171,6 +171,25 @@ body {
 
 .checkmark img {
     filter: invert(100%) sepia(0%) saturate(7496%) hue-rotate(246deg) brightness(97%) contrast(102%);
+}
+
+footer, footer h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: lightgray;
+}
+
+footer img {
+    height: 1.5rem;
+    margin-left: 1rem;
+    margin-top: 0.25rem;
+    transition: transform 0.7s ease-in-out;
+}
+
+footer img:hover {
+    transform: rotate(360deg) scale(2);
 }
 
 /* light mode */
