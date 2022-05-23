@@ -33,4 +33,4 @@ icon.addEventListener("click", function(){
   }
 })
 
-document.getElementById('todo-date').value = new Date().toDateInputValue();
+// document.getElementById('todo-date').value = new Date().toDateInputValue();
