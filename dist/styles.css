@@ -21,7 +21,7 @@ body {
 }
 
 .background {
-    height: 70%;
+    height: 75%;
     color: white;
     display: flex;
 }
@@ -179,6 +179,8 @@ footer, footer h5 {
     align-items: center;
     background: black;
     color: lightgray;
+    margin: 0;
+    height: 5%;
 }
 
 footer img {
@@ -189,7 +191,7 @@ footer img {
 }
 
 footer img:hover {
-    transform: rotate(360deg) scale(2);
+    transform: rotate(360deg) scale(1.5);
 }
 
 /* light mode */
