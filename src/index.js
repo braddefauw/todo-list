@@ -39,5 +39,5 @@ icon.addEventListener("click", function(){
 let checkmark = document.querySelector(".checkmark");
 checkmark.addEventListener("click", function(){
   checkmark.innerHTML = "<img src='images/check-bold.svg' />";
-  checkmark.style.background = 'linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%))';
+  checkmark.style.background = 'linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))';
 })
