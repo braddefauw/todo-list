@@ -27,6 +27,10 @@ const item = (title, due) => {
    remove.classList.add("remove");
    todoItem.appendChild(remove);
 
+   remove.addEventListener("click", function(){
+       todoItem.remove();
+   })
+
     todoItem.dataset.indexNumber = index;
     index++;
 
