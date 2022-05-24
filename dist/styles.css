@@ -102,6 +102,17 @@ body {
     color: lightgray;
 }
 
+#todo-date {
+    margin-right: 1rem;
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    background: none;
+    border: none;
+    color: lightgray;
+    margin-left: auto;
+}
+
 #todo-input {
     margin-left: 1rem;
     width: 300px;
@@ -188,7 +199,6 @@ body {
 }
 
 .remove {
-    margin-left: auto;
     margin-right: 1rem;
     cursor: pointer;
     display: none;
