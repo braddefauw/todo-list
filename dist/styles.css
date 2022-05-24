@@ -160,6 +160,14 @@ body {
     justify-content: flex-start;
 }
 
+.todo-item:hover {
+    background-color: gray;
+}
+
+.todo-item:hover > .remove {
+    display: block;
+}
+
 .checkmark {
     height: 1.5rem;
     width: 1.5rem;
@@ -176,6 +184,8 @@ body {
 .remove {
     margin-left: auto;
     margin-right: 1rem;
+    cursor: pointer;
+    display: none;
 }
 
 footer, footer h5 {
