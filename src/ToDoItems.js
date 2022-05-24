@@ -15,6 +15,7 @@ const item = (title, due) => {
         } else {
             check.innerHTML = "";
         }
+        titleText.classList.toggle("strikethrough");
     })
 
     let titleText = document.createElement("p");
