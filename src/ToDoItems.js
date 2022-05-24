@@ -1,3 +1,5 @@
+let index = 1;
+
 const item = (title, due) => {
     let todoItem = document.createElement("div");
     todoItem.classList.add("todo-item");
@@ -19,6 +21,9 @@ const item = (title, due) => {
    remove.innerText = "X";
    remove.classList.add("remove");
    todoItem.appendChild(remove);
+
+    todoItem.dataset.indexNumber = index;
+    index++;
 
     return todoItem;
 }
