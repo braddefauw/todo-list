@@ -18,6 +18,9 @@ body {
     background-image: url('./images/bg-desktop-dark.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .background {
@@ -27,16 +30,11 @@ body {
 }
 
 #overlay-title {
-    position: fixed; /* Sit on top of the page content */
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 50%;
-    height: 10%;
-    top: 5%;
-    left: 25%;
-    right: 0;
-    bottom: 0;
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    height: 100%;
 }
 
 .text-title {
