@@ -9,8 +9,12 @@ const item = (title, due) => {
     todoItem.appendChild(check);
     //checkmark change
     check.addEventListener("click", function(){
-        check.innerHTML = "<img src='images/check-bold.svg' />";
-        check.style.background = 'linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))';
+        check.classList.toggle("gradient");
+        if (check.innerHTML === "") {
+            check.innerHTML = "<img src='images/check-bold.svg' />";
+        } else {
+            check.innerHTML = "";
+        }
     })
 
     let titleText = document.createElement("p");

@@ -179,6 +179,10 @@ body {
     filter: invert(100%) sepia(0%) saturate(7496%) hue-rotate(246deg) brightness(97%) contrast(102%);
 }
 
+.gradient {
+    background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
 .remove {
     margin-left: auto;
     margin-right: 1rem;
