@@ -1,4 +1,6 @@
-console.log("this is working still");
+import { todoItems } from './ToDoItems';
+
+console.log("this is working still!");
 import { compareAsc, format } from 'date-fns'
 
 format(new Date(2014, 1, 11), 'yyyy-MM-dd')
@@ -41,3 +43,6 @@ checkmark.addEventListener("click", function(){
   checkmark.innerHTML = "<img src='images/check-bold.svg' />";
   checkmark.style.background = 'linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))';
 })
+
+//bring in todo items
+todoItems();
