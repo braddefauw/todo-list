@@ -231,7 +231,7 @@ footer img:hover {
 }
 
 .light-background {
-    background: hsl(0, 0%, 98%)
+    background: hsl(233, 11%, 84%);
 }
 
 .light-overlay {
@@ -240,4 +240,13 @@ footer img:hover {
 
 .light-text {
     color: hsl(233, 14%, 35%);
+}
+
+.light-footer {
+    background: hsl(233, 11%, 84%);
+    color: black;
+}
+
+.light-footer-image {
+    filter: invert(100%) sepia(95%) saturate(0%) hue-rotate(256deg) brightness(96%) contrast(103%);
 }
