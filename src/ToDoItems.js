@@ -10,6 +10,12 @@ const item = (title, due) => {
     titleText.innerText = title;
     todoItem.appendChild(titleText);
 
+    //checkmark change
+    check.addEventListener("click", function(){
+        check.innerHTML = "<img src='images/check-bold.svg' />";
+        check.style.background = 'linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))';
+    })
+
     return todoItem;
 }
 
@@ -18,6 +24,16 @@ const todoItems = () => {
     todoList.appendChild(
         item(
             "Run"
+        )
+    );
+    todoList.appendChild(
+        item(
+            "Code"
+        )
+    );
+    todoList.appendChild(
+        item(
+            "Eat"
         )
     );
 }

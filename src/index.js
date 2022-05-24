@@ -37,12 +37,5 @@ icon.addEventListener("click", function(){
 
 // document.getElementById('todo-date').value = new Date().toDateInputValue();
 
-//checkmark change
-let checkmark = document.querySelector(".checkmark");
-checkmark.addEventListener("click", function(){
-  checkmark.innerHTML = "<img src='images/check-bold.svg' />";
-  checkmark.style.background = 'linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))';
-})
-
 //bring in todo items
 todoItems();
