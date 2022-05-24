@@ -6,6 +6,9 @@ const lightMode = () => {
     const background = document.querySelector(".main-content");
     const todoText = document.querySelector('.new-todo-text');
     const todoList = document.querySelector('#todo-list');
+    const footer = document.querySelector("footer");
+    const footerh5 = document.querySelector(".fh5");
+    const foooterImg = document.querySelector(".footer-img");
     icon.addEventListener("click", function(){
         if(icon.src = "./images/icon-sun.svg"){
             header.classList.toggle("light-header");
@@ -24,7 +27,9 @@ const lightMode = () => {
             todoList.style.background = 'white';
             clicked = true;
         }
-        console.log(clicked);
+        footer.classList.toggle("light-footer");
+        footerh5.classList.toggle("light-footer");
+        foooterImg.classList.toggle("light-footer-image");
     })
 }
 
