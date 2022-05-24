@@ -1,4 +1,5 @@
 import { todoItems } from './ToDoItems';
+import { lightMode } from './lightMode';
 
 console.log("this is working still!");
 import { compareAsc, format } from 'date-fns'
@@ -18,24 +19,10 @@ console.log(dates.sort(compareAsc));
 //   Sun Jul 02 1995 00:00:00
 // ]
 
-const icon = document.querySelector(".icon");
-const header = document.querySelector(".header");
-const background = document.querySelector(".main-content");
-const overlay = document.querySelector('.new-todo-text');
-icon.addEventListener("click", function(){
-  if(icon.src = "./images/icon-sun.svg"){
-    header.classList.toggle("light-header");
-    background.classList.toggle("light-background");
-    overlay.classList.toggle("light-overlay");
-  }
-  if(header.classList.contains("light-header")){
-    icon.src = "./images/icon-moon.svg";
-  }else{
-    icon.src = "./images/icon-sun.svg";
-  }
-})
-
 // document.getElementById('todo-date').value = new Date().toDateInputValue();
 
 //bring in todo items
 todoItems();
+
+//light mode
+lightMode();
