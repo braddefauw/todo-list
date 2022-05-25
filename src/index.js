@@ -1,5 +1,6 @@
 import { todoItems } from './ToDoItems';
 import { lightMode } from './lightMode';
+import { newItem } from './newItem';
 
 console.log("this is working still!");
 import { compareAsc, format } from 'date-fns'
@@ -26,3 +27,6 @@ todoItems();
 
 //light mode
 lightMode();
+
+//create new item
+newItem();
