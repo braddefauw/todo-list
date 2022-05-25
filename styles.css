@@ -238,10 +238,6 @@ footer img:hover {
     background: white;
 }
 
-.light-text {
-    color: hsl(233, 14%, 35%);
-}
-
 .light-footer {
     background: hsl(233, 11%, 84%);
     color: black;
