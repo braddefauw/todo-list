@@ -1,4 +1,4 @@
-import { item, todoItems } from "./ToDoItems";
+import { item } from "./ToDoItems";
 
 const newItem = () => {
     let todoInput = document.getElementById("todo-input");
@@ -26,7 +26,6 @@ const newItem = () => {
 
         let todoList = document.querySelector("#todo-list");
         todoList.appendChild(item(todoValue, todoDate));
-        console.log(item(todoValue, todoDate));
     })
 }
 

@@ -66,6 +66,19 @@ body {
     padding: 1rem;
 }
 
+.dates > * {
+    width: 25%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dates > *:hover {
+    background: gray;
+    border-radius: 1rem;
+}
+
 .dates h3, .projects h1, .projects h4 {
     padding: 0.5rem;
 }
