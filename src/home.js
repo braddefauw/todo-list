@@ -2,10 +2,10 @@ import { todoItems } from "./ToDoItems";
 
 const home = () => {
     let homeBtn = document.getElementById("home");
-    let main = document.querySelector(".main-content");
+    let main = document.querySelector(".todo-list");
     homeBtn.addEventListener("click", function(){
-        main.clear();
-        todoItems();
+        main.innerHTML = "";
+        console.log(todoItems());
     })
 }
 

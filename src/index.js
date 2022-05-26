@@ -2,6 +2,7 @@ import { todoItems } from './ToDoItems';
 import { lightMode } from './lightMode';
 import { newItem } from './newItem';
 import { home } from './home';
+import { today } from './today';
 
 console.log("this is working still!");
 import { compareAsc, format } from 'date-fns'
@@ -34,3 +35,6 @@ newItem();
 
 //home navigation
 home();
+
+//today nav
+today();
