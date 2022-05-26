@@ -6,7 +6,8 @@ const newItem = () => {
         if(!todoInput.value){
             alert("Input cannot be empty. Please enter a todo!")
         }else{
-           console.log(todoInput.value); 
+            let toDoValue = todoInput.value;
+            console.log(toDoValue); 
         }
         //get today's date
         var today = new Date();
@@ -15,7 +16,8 @@ const newItem = () => {
         var yyyy = today.getFullYear();
 
         today = `${yyyy}-${mm}-${dd}`;
-        console.log(date.value, today);
+        let todoDate = date.value;
+        console.log(todoDate, today);
         //test if date value matches current date
         console.log(date.value === today);
     })
