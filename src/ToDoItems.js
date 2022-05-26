@@ -48,17 +48,17 @@ const todoItems = () => {
     let todoList = document.querySelector("#todo-list");
     todoList.appendChild(
         item(
-            "Run", "2022-05-25"
+            "Run", "2022-05-12"
         )
     );
     todoList.appendChild(
         item(
-            "Code"
+            "Code", "2022-05-26"
         )
     );
     todoList.appendChild(
         item(
-            "Eat"
+            "Eat", "2022-05-26"
         )
     );
 }
