@@ -1,6 +1,7 @@
 import { todoItems } from './ToDoItems';
 import { lightMode } from './lightMode';
 import { newItem } from './newItem';
+import { home } from './home';
 
 console.log("this is working still!");
 import { compareAsc, format } from 'date-fns'
@@ -30,3 +31,6 @@ lightMode();
 
 //create new item
 newItem();
+
+//home navigation
+home();
