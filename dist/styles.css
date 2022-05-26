@@ -83,7 +83,7 @@ body {
     padding-top: 1rem;
 }
 
-.new-todo {
+#new-todo {
     width: 60%;
     height: 10%;
     background: rgba(77, 80, 102, 0.5);

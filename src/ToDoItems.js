@@ -1,5 +1,3 @@
-import { todoInput } from './todoInput';
- 
 let index = 1;
 
 const item = (title, due) => {
