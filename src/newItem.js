@@ -6,6 +6,9 @@ const newItem = () => {
     let submitBtn = document.getElementById("submit");
     let date = document.getElementById("todo-date");
     let todoValue, todoDate, today;
+
+    let todayList = [];
+
     submitBtn.addEventListener("click", function(){
         if(!todoInput.value){
             alert("Input cannot be empty. Please enter a todo!")
@@ -29,7 +32,8 @@ const newItem = () => {
         todoList.appendChild(item(todoValue, todoDate));
 
         if(date.value === today){
-            todayItems();
+            todayList.push(item(todoValue, todoDate));
+            console.log(todayList);
         }
     })
 }

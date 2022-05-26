@@ -1,9 +1,10 @@
-import { todoItems } from './ToDoItems';
 import { lightMode } from './lightMode';
 import { newItem } from './newItem';
 import { home } from './home';
 import { today } from './today';
 import { todayItems } from './todayItems';
+import { todoInput } from './todoInput';
+import { todoItems } from './ToDoItems';
 
 console.log("this is working still!");
 import { compareAsc, format } from 'date-fns'
@@ -24,6 +25,9 @@ console.log(dates.sort(compareAsc));
 // ]
 
 // document.getElementById('todo-date').value = new Date().toDateInputValue();
+
+//input
+todoInput();
 
 //bring in todo items
 todoItems();

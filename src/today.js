@@ -1,4 +1,5 @@
-import { todoItems } from "./ToDoItems";
+import { todayItems } from "./todayItems";
+import { todoInput } from "./todoInput";
 
 const today = () => {
     let todayBtn = document.querySelector(".today");
@@ -7,6 +8,8 @@ const today = () => {
     todayBtn.addEventListener("click", function(){
         newTodo.remove();
         main.innerHTML = "";
+        todoInput();
+        todayItems();
     })
 }
 

@@ -1,3 +1,5 @@
+import { todoInput } from './todoInput';
+ 
 let index = 1;
 
 const item = (title, due) => {
@@ -45,6 +47,7 @@ const item = (title, due) => {
 }
 
 const todoItems = () => {
+    
     let todoList = document.querySelector("#todo-list");
     todoList.appendChild(
         item(
