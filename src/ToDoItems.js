@@ -26,6 +26,7 @@ const item = (title, due) => {
     date.setAttribute("type", "date");
     date.setAttribute("id", "todo-date");
     date.setAttribute("name", "todo-date");
+    date.setAttribute("value", due);
     todoItem.appendChild(date);
 
    let remove = document.createElement("p");
@@ -47,7 +48,7 @@ const todoItems = () => {
     let todoList = document.querySelector("#todo-list");
     todoList.appendChild(
         item(
-            "Run"
+            "Run", "2022-05-25"
         )
     );
     todoList.appendChild(
