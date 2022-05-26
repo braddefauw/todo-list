@@ -1,5 +1,3 @@
-import { newItem } from './newItem';
-
 let index = 1;
 
 const item = (title, due) => {
@@ -64,4 +62,4 @@ const todoItems = () => {
     );
 }
 
-export { todoItems };
+export { item, todoItems };
