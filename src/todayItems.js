@@ -2,7 +2,9 @@ import { todayList } from "./newItem";
 
 const todayItems = () => {
     let todoList = document.getElementById("todo-list");
-    todoList.appendChild(todayList[0]);
+    todayList.forEach(function(item, index){
+        todoList.appendChild(item);
+    })
     console.log(todayList);
 }
 

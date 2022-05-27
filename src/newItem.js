@@ -29,12 +29,13 @@ const newItem = () => {
         // console.log(date.value === today);
 
         let todoList = document.querySelector("#todo-list");
+        let newItem = item(todoValue, todoDate)
         if(todoValue){
-           todoList.appendChild(item(todoValue, todoDate)); 
+           todoList.appendChild(newItem); 
         }
 
         if(date.value === today){
-            todayList.push(item(todoValue, todoDate));
+            todayList.push(newItem);
             console.log(todayList);
         }
     })
