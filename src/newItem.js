@@ -1,5 +1,7 @@
 import { item, todoListItems } from "./ToDoItems";
 
+import moment from 'moment';
+
 let todayList = [];
 let weekList = [];
 
@@ -17,12 +19,7 @@ const newItem = () => {
             // console.log(toDoValue); 
         }
         //get today's date
-        today = new Date();
-        let dd = String(today.getDate()).padStart(2, '0');
-        let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-        let yyyy = today.getFullYear();
-
-        today = `${yyyy}-${mm}-${dd}`;
+        today = moment().format('L');
         todoDate = date.value;
         // console.log(todoDate, today);
         // //test if date value matches current date
@@ -38,9 +35,9 @@ const newItem = () => {
             todayList.push(newItem);
         }
 
-        if(date.value === today){
-            weekList.push(newItem);
-        }
+        let sevenDaysAgo = moment().subtract(7, 'days').calendar();
+        let sevenDaysFromNow = moment().add(7, 'days').calendar();
+        console.log(today, sevenDaysAgo, sevenDaysFromNow);
     })
 }
 
