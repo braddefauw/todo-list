@@ -7,7 +7,7 @@ const today = () => {
     let main = document.querySelector("#todo-list");
     todayBtn.addEventListener("click", function(){
         newTodo.innerHTML = "TODAY";
-        newTodo.style.background = "none";
+        newTodo.style.fontSize = "2rem";
         main.innerHTML = "";
         todayItems();
     })
