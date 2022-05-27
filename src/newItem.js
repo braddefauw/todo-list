@@ -21,6 +21,10 @@ const newItem = () => {
         //get today's date
         today = moment().format('L');
         todoDate = date.value;
+        let year = todoDate.substr(0, 4);
+        let month = todoDate.substr(5, 2);
+        let day = todoDate.substr(8, 2);
+        let formattedDate = `${month}/${day}/${year}`
         // console.log(todoDate, today);
         // //test if date value matches current date
         // console.log(date.value === today);
@@ -37,7 +41,8 @@ const newItem = () => {
 
         let sevenDaysAgo = moment().subtract(7, 'days').calendar();
         let sevenDaysFromNow = moment().add(7, 'days').calendar();
-        console.log(today, sevenDaysAgo, sevenDaysFromNow);
+        let isThisWeek = (formattedDate > sevenDaysAgo && formattedDate < sevenDaysFromNow);
+        console.log(formattedDate, sevenDaysAgo, sevenDaysFromNow, isThisWeek);
     })
 }
 
