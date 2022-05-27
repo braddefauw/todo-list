@@ -6,7 +6,7 @@ const today = () => {
     let newTodo = document.querySelector("#new-todo");
     let main = document.querySelector("#todo-list");
     todayBtn.addEventListener("click", function(){
-        newTodo.remove();
+        newTodo.innerHTML = "";
         main.innerHTML = "";
         todoInput();
         todayItems();

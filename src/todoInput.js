@@ -1,7 +1,6 @@
 const todoInput = () => {
     let main = document.querySelector(".main-content");
-    let newTodo = document.createElement("div");
-    newTodo.setAttribute("id", "new-todo");
+    let newTodo = document.getElementById("new-todo");
     let newTodoText = document.createElement("div");
     newTodoText.classList.add("new-todo-text");
     newTodo.appendChild(newTodoText);
