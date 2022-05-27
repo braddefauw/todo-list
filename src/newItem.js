@@ -1,13 +1,13 @@
 import { item } from "./ToDoItems";
 import { todayItems } from "./todayItems";
 
+let todayList = [];
+
 const newItem = () => {
     let todoInput = document.getElementById("todo-input");
     let submitBtn = document.getElementById("submit");
     let date = document.getElementById("todo-date");
     let todoValue, todoDate, today;
-
-    let todayList = [];
 
     submitBtn.addEventListener("click", function(){
         if(!todoInput.value){
@@ -40,4 +40,4 @@ const newItem = () => {
     })
 }
 
-export { newItem };
+export { newItem, todayList };
