@@ -1,5 +1,6 @@
 import { todoItems } from "./ToDoItems";
 import { todoInput } from "./todoInput";
+import { newItem } from "./newItem";
 
 const home = () => {
     let homeBtn = document.getElementById("home");
@@ -10,6 +11,7 @@ const home = () => {
         main.innerHTML = "";
         todoInput();
         todoItems();
+        newItem();
     })
 }
 
