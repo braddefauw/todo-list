@@ -5,7 +5,6 @@ const todayItems = () => {
     todayList.forEach(function(item, index){
         todoList.appendChild(item);
     })
-    console.log(todayList);
 }
 
 export { todayItems };

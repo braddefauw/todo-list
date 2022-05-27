@@ -33,10 +33,8 @@ const newItem = () => {
            todoList.appendChild(newItem);
            todoListItems.push(newItem);
         }
-
         if(date.value === today){
             todayList.push(newItem);
-            console.log(todayList);
         }
     })
 }
