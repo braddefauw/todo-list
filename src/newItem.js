@@ -35,14 +35,16 @@ const newItem = () => {
            todoList.appendChild(newItem);
            todoListItems.push(newItem);
         }
-        if(date.value === today){
+        if(formattedDate === today){
             todayList.push(newItem);
         }
 
         let sevenDaysAgo = moment().subtract(7, 'days').calendar();
         let sevenDaysFromNow = moment().add(7, 'days').calendar();
         let isThisWeek = (formattedDate > sevenDaysAgo && formattedDate < sevenDaysFromNow);
-        console.log(formattedDate, sevenDaysAgo, sevenDaysFromNow, isThisWeek);
+        if(isThisWeek){
+            weekList.push(newItem);
+        }
     })
 }
 
