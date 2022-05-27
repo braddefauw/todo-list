@@ -29,7 +29,9 @@ const newItem = () => {
         // console.log(date.value === today);
 
         let todoList = document.querySelector("#todo-list");
-        todoList.appendChild(item(todoValue, todoDate));
+        if(todoValue){
+           todoList.appendChild(item(todoValue, todoDate)); 
+        }
 
         if(date.value === today){
             todayList.push(item(todoValue, todoDate));
