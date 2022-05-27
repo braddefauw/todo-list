@@ -6,9 +6,9 @@ const today = () => {
     let newTodo = document.querySelector("#new-todo");
     let main = document.querySelector("#todo-list");
     todayBtn.addEventListener("click", function(){
-        newTodo.innerHTML = "";
+        newTodo.innerHTML = "TODAY";
+        newTodo.style.background = "none";
         main.innerHTML = "";
-        todoInput();
         todayItems();
     })
 }
