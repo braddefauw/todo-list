@@ -1,4 +1,4 @@
-import { item } from "./ToDoItems";
+import { item, todoListItems } from "./ToDoItems";
 
 let todayList = [];
 
@@ -28,9 +28,10 @@ const newItem = () => {
         // console.log(date.value === today);
 
         let todoList = document.querySelector("#todo-list");
-        let newItem = item(todoValue, todoDate)
+        let newItem = item(todoValue, todoDate);
         if(todoValue){
-           todoList.appendChild(newItem); 
+           todoList.appendChild(newItem);
+           todoListItems.push(newItem);
         }
 
         if(date.value === today){

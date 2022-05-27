@@ -1,4 +1,5 @@
 let index = 1;
+let todoListItems = [];
 
 const item = (title, due) => {
     let todoItem = document.createElement("div");
@@ -45,23 +46,14 @@ const item = (title, due) => {
 }
 
 const todoItems = () => {
-    
     let todoList = document.querySelector("#todo-list");
-    todoList.appendChild(
-        item(
-            "Run", "2022-05-12"
-        )
-    );
-    todoList.appendChild(
-        item(
-            "Code", "2022-05-26"
-        )
-    );
-    todoList.appendChild(
-        item(
-            "Eat", "2022-05-26"
-        )
-    );
+    // let itemOne = item("Run", "2022-05-12");
+    // let itemTwo = item("Code", "2022-05-26");
+    // let itemThree = item("Eat", "2022-05-26");
+    // todoListItems.push(itemOne, itemTwo, itemThree)
+    todoListItems.forEach(function(item, index){
+        todoList.appendChild(item);
+    })   
 }
 
-export { item, todoItems };
+export { item, todoItems, todoListItems };

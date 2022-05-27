@@ -6,7 +6,7 @@ import { todayItems } from './todayItems';
 import { todoInput } from './todoInput';
 import { todoItems } from './ToDoItems';
 
-console.log("this is working still!");
+console.log("this is working still");
 import { compareAsc, format } from 'date-fns'
 
 format(new Date(2014, 1, 11), 'yyyy-MM-dd')
