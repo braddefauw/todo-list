@@ -1,5 +1,4 @@
 import { item } from "./ToDoItems";
-import { todayItems } from "./todayItems";
 
 let todayList = [];
 
