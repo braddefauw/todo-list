@@ -90,6 +90,8 @@ body {
     margin-top: 5%;
     border-radius: 0.5rem;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .new-todo-text{
@@ -241,10 +243,6 @@ footer img:hover {
 
 .light-background {
     background: hsl(233, 11%, 84%);
-}
-
-.light-overlay {
-    background: white;
 }
 
 .light-footer {
