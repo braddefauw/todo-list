@@ -1,6 +1,7 @@
 import { item, todoListItems } from "./ToDoItems";
 
 let todayList = [];
+let weekList = [];
 
 const newItem = () => {
     let todoInput = document.getElementById("todo-input");
@@ -36,7 +37,11 @@ const newItem = () => {
         if(date.value === today){
             todayList.push(newItem);
         }
+
+        if(date.value === today){
+            weekList.push(newItem);
+        }
     })
 }
 
-export { newItem, todayList };
+export { newItem, todayList, weekList };
