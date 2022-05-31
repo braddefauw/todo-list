@@ -61,7 +61,7 @@ body {
     align-items: center;
 }
 
-.dates, .projects {
+.dates{
     margin: 0;
     padding: 1rem;
 }
@@ -74,10 +74,25 @@ body {
     align-items: center;
 }
 
-.projects h4 {
+.projects {
+    margin: 0;
     padding: 1rem;
+}
+
+.projects h4 {
+    padding: 1rem 0rem 1rem 0rem;
     width: 50%;
     margin: 0;
+}
+
+.projects-list > * {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    width: 25%;
 }
 
 .add-project-popup {
@@ -115,7 +130,7 @@ body {
     background: red;
 }
 
-.dates > *:hover, .projects h4:hover {
+.dates > *:hover, .projects h4:hover, .projects-list > *:hover {
     background: gray;
     border-radius: 1rem;
 }
