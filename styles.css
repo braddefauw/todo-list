@@ -77,6 +77,37 @@ body {
 .projects h4 {
     padding: 1rem;
     width: 50%;
+    margin: 0;
+}
+
+.add-proj-btns {
+    display: flex;
+}
+
+.add-proj-input {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    width: 8rem;
+}
+
+.new-proj-add, .new-proj-cancel {
+    width: 4rem;
+    height: 2rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+
+.new-proj-add {
+    background: green;
+}
+
+.new-proj-cancel {
+    background: red;
 }
 
 .dates > *:hover, .projects h4:hover {
