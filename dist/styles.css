@@ -74,7 +74,12 @@ body {
     align-items: center;
 }
 
-.dates > *:hover {
+.projects h4 {
+    padding: 1rem;
+    width: 50%;
+}
+
+.dates > *:hover, .projects h4:hover {
     background: gray;
     border-radius: 1rem;
 }
