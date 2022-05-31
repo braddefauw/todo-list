@@ -5,12 +5,17 @@ const addProject = () => {
 
     let newProjAdd = document.querySelector(".new-proj-add");
     let addProjPopup = document.querySelector(".add-project-popup")
-    let addInput = document.querySelector(".add-proj-input")
+    let addInput = document.querySelector(".add-proj-input");
+    let projectsList = document.querySelector(".projects-list");
 
     projectBtn.addEventListener("click", function(){
         addProjPopup.style.display = "block";
     })
     newProjAdd.addEventListener("click", function(){
+        let newProj = document.createElement("div");
+        newProj.innerText = addInput.value;
+        projectsList.appendChild(newProj);
+        addProjPopup.style.display = "none";
         newTodo.innerHTML = addInput.value;
         newTodo.style.fontSize = "2rem";
         main.innerHTML = "";
