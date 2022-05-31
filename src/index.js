@@ -5,6 +5,7 @@ import { today } from './today';
 import { todoInput } from './todoInput';
 import { todoItems } from './ToDoItems';
 import { week } from './week';
+import { addProject } from './addProject';
 
 console.log("this is working still");
 // import { compareAsc, format } from 'date-fns'
@@ -46,3 +47,6 @@ today();
 
 //week nav
 week();
+
+//add project
+addProject();
