@@ -11,7 +11,7 @@ const addProject = () => {
         addProjPopup.style.display = "block";
     })
     newProjAdd.addEventListener("click", function(){
-        newTodo.innerHTML = "NEW PROJECT";
+        newTodo.innerHTML = addInput.value;
         newTodo.style.fontSize = "2rem";
         main.innerHTML = "";
     })
