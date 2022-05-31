@@ -93,6 +93,7 @@ body {
     border-radius: 0.5rem;
     border: none;
     width: 8rem;
+    font-family: inherit;
 }
 
 .new-proj-add, .new-proj-cancel {
