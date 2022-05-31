@@ -80,6 +80,10 @@ body {
     margin: 0;
 }
 
+.add-project-popup {
+    display: none;
+}
+
 .add-proj-btns {
     display: flex;
 }
