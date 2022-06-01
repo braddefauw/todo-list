@@ -13,12 +13,15 @@ const addProject = () => {
     })
     newProjAdd.addEventListener("click", function(){
         let newProj = document.createElement("div");
+        newProj.classList.add("new-project")
         newProj.innerText = addInput.value;
         projectsList.appendChild(newProj);
         addProjPopup.style.display = "none";
-        newTodo.innerHTML = addInput.value;
-        newTodo.style.fontSize = "2rem";
-        main.innerHTML = "";
+        newProj.addEventListener("click", function(){
+            newTodo.innerHTML = addInput.value;
+            newTodo.style.fontSize = "2rem";
+            main.innerHTML = "";
+        })
     })
 }
 
