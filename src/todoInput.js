@@ -2,6 +2,7 @@ const todoInput = () => {
     let main = document.querySelector(".main-content");
     let newTodo = document.getElementById("new-todo");
     let newTodoText = document.createElement("div");
+    let todoList = document.querySelector("#todo-list");
     newTodoText.classList.add("new-todo-text");
     newTodo.appendChild(newTodoText);
 
@@ -28,7 +29,7 @@ const todoInput = () => {
     cancel.innerText = "Cancel";
     newTodoText.appendChild(cancel);
 
-    main.prepend(newTodo);
+    main.insertBefore(newTodo, todoList)
 }
 
 export {todoInput}

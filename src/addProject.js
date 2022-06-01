@@ -1,6 +1,9 @@
+import { todoInput } from "./todoInput";
+
 const addProject = () => {
     let projectBtn = document.querySelector(".add-proj");
-    let newTodo = document.querySelector("#new-todo");
+    let title = document.querySelector("#title");
+    let newTodo = document.querySelector("#new-todo")
     let main = document.querySelector("#todo-list");
 
     let newProjAdd = document.querySelector(".new-proj-add");
@@ -22,8 +25,9 @@ const addProject = () => {
             projectsList.appendChild(newProj);
             addProjPopup.style.display = "none";
             newProj.addEventListener("click", function(){
-                newTodo.innerHTML = newProj.innerText;
-                newTodo.style.fontSize = "2rem";
+                newTodo.style.display = "none";
+                title.innerHTML = newProj.innerText;
+                title.style.fontSize = "2rem";
                 main.innerHTML = "";
             })
         }
