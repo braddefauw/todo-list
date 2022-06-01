@@ -16,8 +16,8 @@ const newItem = () => {
             alert("Input cannot be empty. Please enter a todo!")
         }else{
             todoValue = todoInput.value;
-            // console.log(toDoValue); 
         }
+        todoInput.value = "";
         //get today's date
         today = moment().format('L');
         todoDate = date.value;

@@ -153,6 +153,13 @@ body {
     padding-top: 1rem;
 }
 
+#title {
+    font-size: 2rem;
+    text-decoration: underline;
+    margin-top: 2.5rem;
+    text-transform: capitalize;
+}
+
 #new-todo, .new-proj-todo-text {
     width: 60%;
     height: 10%;
