@@ -18,7 +18,7 @@ const addProject = () => {
         projectsList.appendChild(newProj);
         addProjPopup.style.display = "none";
         newProj.addEventListener("click", function(){
-            newTodo.innerHTML = addInput.value;
+            newTodo.innerHTML = newProj.innerText;
             newTodo.style.fontSize = "2rem";
             main.innerHTML = "";
         })
