@@ -13,16 +13,20 @@ const addProject = () => {
         addProjPopup.style.display = "block";
     })
     newProjAdd.addEventListener("click", function(){
-        let newProj = document.createElement("div");
-        newProj.classList.add("new-project")
-        newProj.innerText = addInput.value;
-        projectsList.appendChild(newProj);
-        addProjPopup.style.display = "none";
-        newProj.addEventListener("click", function(){
-            newTodo.innerHTML = newProj.innerText;
-            newTodo.style.fontSize = "2rem";
-            main.innerHTML = "";
-        })
+        if(!addInput.value){
+            alert("Please enter a project name");
+        }else{
+            let newProj = document.createElement("div");
+            newProj.classList.add("new-project")
+            newProj.innerText = addInput.value;
+            projectsList.appendChild(newProj);
+            addProjPopup.style.display = "none";
+            newProj.addEventListener("click", function(){
+                newTodo.innerHTML = newProj.innerText;
+                newTodo.style.fontSize = "2rem";
+                main.innerHTML = "";
+            })
+        }
     })
     newProjCancel.addEventListener("click", function (){
         addProjPopup.style.display = "none";
