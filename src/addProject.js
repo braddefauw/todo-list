@@ -4,6 +4,7 @@ const addProject = () => {
     let main = document.querySelector("#todo-list");
 
     let newProjAdd = document.querySelector(".new-proj-add");
+    let newProjCancel = document.querySelector(".new-proj-cancel")
     let addProjPopup = document.querySelector(".add-project-popup")
     let addInput = document.querySelector(".add-proj-input");
     let projectsList = document.querySelector(".projects-list");
@@ -22,6 +23,9 @@ const addProject = () => {
             newTodo.style.fontSize = "2rem";
             main.innerHTML = "";
         })
+    })
+    newProjCancel.addEventListener("click", function (){
+        addProjPopup.style.display = "none";
     })
 }
 
