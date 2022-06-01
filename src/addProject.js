@@ -1,5 +1,3 @@
-import { todoInput } from "./todoInput";
-
 const addProject = () => {
     let projectBtn = document.querySelector(".add-proj");
     let title = document.querySelector("#title");
@@ -25,7 +23,6 @@ const addProject = () => {
             projectsList.appendChild(newProj);
             addProjPopup.style.display = "none";
             newProj.addEventListener("click", function(){
-                newTodo.style.display = "none";
                 title.innerHTML = newProj.innerText;
                 title.style.fontSize = "2rem";
                 main.innerHTML = "";
