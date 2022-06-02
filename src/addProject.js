@@ -18,7 +18,7 @@ const addProject = () => {
             alert("Please enter a project name");
         }else{
             let newProj = document.createElement("div");
-            newProj.classList.add("new-project")
+            newProj.classList.add("new-project");
             newProj.innerText = addInput.value;
             projectsList.appendChild(newProj);
             let xBtn = document.createElement("p");
@@ -30,6 +30,10 @@ const addProject = () => {
                 title.innerHTML = newProj.innerText;
                 title.style.fontSize = "2rem";
                 main.innerHTML = "";
+            })
+            xBtn.addEventListener("click", function(){
+                this.parentElement.remove();
+                addInput.value = "";
             })
         }
     })
