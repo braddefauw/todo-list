@@ -14,7 +14,7 @@ body {
 }
 
 .header {
-    height: 20%;
+    min-height: 20%;
     background-image: url('./images/bg-desktop-dark.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,7 +24,7 @@ body {
 }
 
 .background {
-    height: 75%;
+    min-height: 75%;
     color: white;
     background: black;;
     display: flex;
@@ -50,13 +50,13 @@ body {
 .sidebar {
     background-color: rgba(77, 80, 102, 0.5);
     width: 20%;
-    height: 100%;
+    min-height: 100%;
     overflow: auto;
 }
 
 .main-content {
     width: 80%;
-    height: 100%;
+    min-height: 100%;
     background: black;
     display: flex;
     flex-direction: column;
