@@ -1,3 +1,5 @@
+import { newProjList } from "./newItem";
+
 const addProject = () => {
     let projectBtn = document.querySelector(".add-proj");
     let title = document.querySelector("#title");
@@ -35,6 +37,9 @@ const addProject = () => {
                 newTodo.style.display = "flex";
                 addInput.value = "";
                 main.innerHTML = "";
+                newProjList.forEach(function(item, index){
+                    main.appendChild(item);
+                })
             })
             xBtn.addEventListener("click", function(){
                 this.parentElement.remove();

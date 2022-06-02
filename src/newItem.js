@@ -4,6 +4,8 @@ import moment from 'moment';
 
 let todayList = [];
 let weekList = [];
+let projectsList = document.querySelector(".projects-list");
+let newProjList = [];
 
 const newItem = () => {
     let todoInput = document.getElementById("todo-input");
@@ -24,9 +26,6 @@ const newItem = () => {
         let month = todoDate.substr(5, 2);
         let day = todoDate.substr(8, 2);
         let formattedDate = `${month}/${day}/${year}`
-        // console.log(todoDate, today);
-        // //test if date value matches current date
-        // console.log(date.value === today);
 
         let todoList = document.querySelector("#todo-list");
         let newItem = item(todoValue, todoDate);
@@ -44,9 +43,16 @@ const newItem = () => {
         if(isThisWeek){
             weekList.push(newItem);
         }
+
+        if(projectsList.hasChildNodes()){
+            newProjList.push(newItem);
+        }else{
+            console.log("no children")
+        }
+
         todoInput.value = "";
         date.value = "";
     })
 }
 
-export { newItem, todayList, weekList };
+export { newItem, todayList, weekList, newProjList };
