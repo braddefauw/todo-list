@@ -8,7 +8,6 @@ const week = () => {
     weekBtn.addEventListener("click", function(){
         newTodo.style.display = "none";
         title.innerHTML = "THIS WEEK";
-        title.style.fontSize = "2rem";
         main.innerHTML = "";
         weekItems();
     })

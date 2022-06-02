@@ -1,3 +1,5 @@
+import { home } from "./home";
+
 const addProject = () => {
     let projectBtn = document.querySelector(".add-proj");
     let title = document.querySelector("#title");
@@ -20,17 +22,19 @@ const addProject = () => {
             let newProj = document.createElement("div");
             newProj.classList.add("new-project");
             let projectText = addInput.value;
-            newProj.innerText = projectText;
+            let projectTextDiv = document.createElement("div");
+            projectTextDiv.classList.add("proj-text-div");
+            projectTextDiv.innerText = projectText;
+            newProj.appendChild(projectTextDiv);
             projectsList.appendChild(newProj);
             let xBtn = document.createElement("p");
             xBtn.innerText = "X";
             xBtn.classList.add("x-button");
             newProj.appendChild(xBtn);
             addProjPopup.style.display = "none";
-            newProj.addEventListener("click", function(){
+            projectTextDiv.addEventListener("click", function(){
                 title.innerHTML = projectText;
-                title.style.fontSize = "2rem";
-                main.innerHTML = "";
+                addInput.value = "";
             })
             xBtn.addEventListener("click", function(){
                 this.parentElement.remove();

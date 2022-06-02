@@ -10,7 +10,6 @@ const home = () => {
     let newProjToDo = document.querySelector(".new-proj-todo-text");
     homeBtn.addEventListener("click", function(){
         title.innerHTML = "HOME";
-        title.style.fontSize = "2rem";
         main.innerHTML = "";
         newTodo.style.display = "flex";
         if(newTodo.hasChildNodes() === "false"){
