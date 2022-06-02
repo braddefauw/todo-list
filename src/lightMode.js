@@ -30,7 +30,6 @@ const lightMode = () => {
         footer.classList.toggle("light-footer");
         footerh5.classList.toggle("light-footer");
         foooterImg.classList.toggle("light-footer-image");
-        console.log(todoText.classList)
     })
 }
 
