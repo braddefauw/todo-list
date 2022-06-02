@@ -12,6 +12,7 @@ const newItem = () => {
     let todoValue, todoDate, today;
 
     submitBtn.addEventListener("click", function(){
+        console.log(todoInput.value)
         if(!todoInput.value){
             alert("Input cannot be empty. Please enter a todo!")
         }else{

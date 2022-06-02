@@ -1,5 +1,3 @@
-import { home } from "./home";
-
 const addProject = () => {
     let projectBtn = document.querySelector(".add-proj");
     let title = document.querySelector("#title");
@@ -34,6 +32,7 @@ const addProject = () => {
             addProjPopup.style.display = "none";
             projectTextDiv.addEventListener("click", function(){
                 title.innerHTML = projectText;
+                newTodo.style.display = "flex";
                 addInput.value = "";
             })
             xBtn.addEventListener("click", function(){
