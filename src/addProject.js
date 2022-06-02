@@ -21,6 +21,10 @@ const addProject = () => {
             newProj.classList.add("new-project")
             newProj.innerText = addInput.value;
             projectsList.appendChild(newProj);
+            let xBtn = document.createElement("p");
+            xBtn.innerText = "X";
+            xBtn.classList.add("x-button");
+            newProj.appendChild(xBtn);
             addProjPopup.style.display = "none";
             newProj.addEventListener("click", function(){
                 title.innerHTML = newProj.innerText;
