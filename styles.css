@@ -186,7 +186,11 @@ body {
     font-size: 2rem;
     text-decoration: underline;
     margin-top: 2.5rem;
-    text-transform: capitalize;
+    text-transform: uppercase;
+}
+
+.proj-text-div {
+    width: 90%;
 }
 
 #new-todo, .new-proj-todo-text {
