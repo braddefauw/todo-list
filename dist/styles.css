@@ -318,6 +318,10 @@ footer img:hover {
     background-image: url('./images/bg-desktop-light.jpg');
 }
 
+.light-title {
+    color: black;
+}
+
 .light-background {
     background: hsl(233, 11%, 84%);
 }
