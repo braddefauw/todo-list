@@ -19,7 +19,8 @@ const addProject = () => {
         }else{
             let newProj = document.createElement("div");
             newProj.classList.add("new-project");
-            newProj.innerText = addInput.value;
+            let projectText = addInput.value;
+            newProj.innerText = projectText;
             projectsList.appendChild(newProj);
             let xBtn = document.createElement("p");
             xBtn.innerText = "X";
@@ -27,7 +28,7 @@ const addProject = () => {
             newProj.appendChild(xBtn);
             addProjPopup.style.display = "none";
             newProj.addEventListener("click", function(){
-                title.innerHTML = newProj.innerText;
+                title.innerHTML = projectText;
                 title.style.fontSize = "2rem";
                 main.innerHTML = "";
             })
