@@ -9,6 +9,7 @@ const lightMode = () => {
     const footerh5 = document.querySelector(".fh5");
     const foooterImg = document.querySelector(".footer-img");
     let title = document.querySelector("#title");
+    let backgroundBehind = document.querySelector(".background");
     icon.addEventListener("click", function(){
         if(icon.src = "./images/icon-sun.svg"){
             header.classList.toggle("light-header");
@@ -26,6 +27,7 @@ const lightMode = () => {
             todoList.style.background = 'rgba(77, 80, 102, 0.5)';
             clicked = true;
         }
+        backgroundBehind.classList.toggle("light-background-behind");
         title.classList.toggle("light-title");
         footer.classList.toggle("light-footer");
         footerh5.classList.toggle("light-footer");
