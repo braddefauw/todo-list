@@ -167,6 +167,10 @@ body {
     border-radius: 1rem;
 }
 
+.projects-list > *:hover .x-button{
+    display: block;
+}
+
 #home {
     padding-top: 1rem;
 }
