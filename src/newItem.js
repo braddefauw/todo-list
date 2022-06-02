@@ -12,6 +12,7 @@ const newItem = () => {
     let submitBtn = document.getElementById("submit");
     let date = document.getElementById("todo-date");
     let todoValue, todoDate, today;
+    let idx = 0;
 
     submitBtn.addEventListener("click", function(){
         if(!todoInput.value){
@@ -44,11 +45,13 @@ const newItem = () => {
             weekList.push(newItem);
         }
 
-        if(projectsList.hasChildNodes()){
-            newProjList.push(newItem);
-        }else{
-            console.log("no children")
-        }
+        // if(projectsList.hasChildNodes()){
+        //     newProjList.push({idx, todoValue, todoDate});
+        //     idx++;
+        //     console.log(newProjList);
+        // }else{
+        //     console.log("no children")
+        // }
 
         todoInput.value = "";
         date.value = "";
