@@ -1,7 +1,7 @@
 const addProject = () => {
     let projectBtn = document.querySelector(".add-proj");
     let title = document.querySelector("#title");
-    let newTodo = document.querySelector("#new-todo")
+    let newTodo = document.querySelector("#new-todo");
     let main = document.querySelector("#todo-list");
 
     let newProjAdd = document.querySelector(".new-proj-add");
@@ -34,6 +34,7 @@ const addProject = () => {
                 title.innerHTML = projectText;
                 newTodo.style.display = "flex";
                 addInput.value = "";
+                main.innerHTML = "";
             })
             xBtn.addEventListener("click", function(){
                 this.parentElement.remove();

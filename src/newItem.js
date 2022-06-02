@@ -12,13 +12,11 @@ const newItem = () => {
     let todoValue, todoDate, today;
 
     submitBtn.addEventListener("click", function(){
-        console.log(todoInput.value)
         if(!todoInput.value){
             alert("Input cannot be empty. Please enter a todo!")
         }else{
             todoValue = todoInput.value;
         }
-        todoInput.value = "";
         //get today's date
         today = moment().format('L');
         todoDate = date.value;
@@ -46,6 +44,8 @@ const newItem = () => {
         if(isThisWeek){
             weekList.push(newItem);
         }
+        todoInput.value = "";
+        date.value = "";
     })
 }
 
