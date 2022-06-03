@@ -39,10 +39,16 @@ const item = (title, due) => {
    todoItem.appendChild(remove);
 
    remove.addEventListener("click", function(){
-        todoItem.remove();
+        console.log(todoArr, todoItem.dataset.indexNumber);
+        let index = parseInt(todoItem.dataset.indexNumber);
+        console.log(index, index>-1);
+        if(index > -1){
+            todoArr.splice(index, 1)
+        }
         console.log(todoArr);
-        // localStorage.setItem(`${pageTitle}`, JSON.stringify(todoArr));
-        // console.log(localStorage[`${pageTitle}`]);
+        todoItem.remove();
+        localStorage.setItem(`${pageTitle}`, JSON.stringify(todoArr));
+        console.log(localStorage[`${pageTitle}`]);
    })
 
     todoItem.dataset.indexNumber = index;
