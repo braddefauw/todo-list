@@ -1,6 +1,7 @@
 import { newProjList, grouped } from "./newItem";
 
 let projList = [];
+let pageTitle = title.innerText;
 
 const addProject = () => {
     let index = 0;
@@ -41,10 +42,13 @@ const addProject = () => {
             let projTextUpper = projectText.toUpperCase();
             projList.push(projTextUpper);
             projectTextDiv.addEventListener("click", function(){
+                pageTitle = projectText;
+                console.log(pageTitle);
                 title.innerHTML = projectText;
                 newTodo.style.display = "flex";
                 addInput.value = "";
                 main.innerHTML = "";
+                return pageTitle;
                 // newProjList.forEach(function(item, index){
                 //     main.appendChild(item);
                 // })

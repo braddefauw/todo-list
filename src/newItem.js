@@ -24,7 +24,7 @@ let todayList = [];
 let weekList = [];
 let projectsList = document.querySelector(".projects-list");
 let newProjList = [];
-let grouped;
+let pageTitle;
 
 const oldItems = () => {
     for(let listItem of oldHomeList){
@@ -32,6 +32,7 @@ const oldItems = () => {
         let submitBtn = document.getElementById("submit");
         let date = document.getElementById("todo-date");
         let title = document.querySelector("#title");
+        pageTitle = title.innerText;
         let todoValue, todoDate, today;
         let idx = 0;
     
@@ -75,8 +76,6 @@ const newItem = () => {
     let title = document.querySelector("#title");
     let todoValue, todoDate, today;
     let idx = 0;
-
-    let pageTitle = title.innerText;
 
     submitBtn.addEventListener("click", function(){
         if(!todoInput.value){
@@ -129,8 +128,11 @@ const newItem = () => {
         //     console.log("no children")
         // }
         // console.log(pageTitle, todoArr);
+        pageTitle = title.innerText;
+        console.log(pageTitle);
         localStorage.setItem(`${pageTitle}`, JSON.stringify(todoArr));
-        console.log(localStorage[`${pageTitle}`]);
+        // console.log(localStorage[`${pageTitle}`]);
+        console.log(pageTitle, localStorage);
 
         todoInput.value = "";
         date.value = "";
