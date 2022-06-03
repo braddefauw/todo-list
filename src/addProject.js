@@ -24,26 +24,40 @@ const addProject = () => {
         if(!addInput.value){
             alert("Please enter a project name");
         }else{
+            //create new project div + class
             let newProj = document.createElement("div");
             newProj.classList.add("new-project");
+            //project text
             let projectText = addInput.value;
+            //parent div for project text, there is something specific to click on besides entire div
             let projectTextDiv = document.createElement("div");
             projectTextDiv.classList.add("proj-text-div");
             projectTextDiv.innerText = projectText;
             newProj.appendChild(projectTextDiv);
+            //add new project to project list
             projectsList.appendChild(newProj);
+            //delete button
             let xBtn = document.createElement("p");
             xBtn.innerText = "X";
             xBtn.classList.add("x-button");
             newProj.appendChild(xBtn);
+            //hide add project popup
             addProjPopup.style.display = "none";
+            //add new project data index number
             newProj.dataset.indexNumber = index;
             index++;
+            //convert project text to uppercase and push to project list
             let projTextUpper = projectText.toUpperCase();
             projList.push(projTextUpper);
+
             projectTextDiv.addEventListener("click", function(){
                 pageTitle = projectText;
-                console.log(pageTitle);
+                // for(var i = 0; i < localStorage.length; i++){
+                //     for (const [key, value] of Object.entries(localStorage)) {
+                //         console.log(localStorage.length, `${key}`);
+                //     }
+                // }
+                // console.log(pageTitle);
                 title.innerHTML = projectText;
                 newTodo.style.display = "flex";
                 addInput.value = "";
