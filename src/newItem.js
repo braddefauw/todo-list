@@ -28,13 +28,9 @@ let pageTitle;
 
 const oldItems = () => {
     for(let listItem of oldHomeList){
-        let todoInput = document.getElementById("todo-input");
-        let submitBtn = document.getElementById("submit");
-        let date = document.getElementById("todo-date");
         let title = document.querySelector("#title");
         pageTitle = title.innerText;
         let todoValue, todoDate, today;
-        let idx = 0;
     
         todoValue = listItem.todoValue;
     
@@ -129,7 +125,6 @@ const newItem = () => {
         // }
         // console.log(pageTitle, todoArr);
         pageTitle = title.innerText;
-        console.log(pageTitle);
         localStorage.setItem(`${pageTitle}`, JSON.stringify(todoArr));
         // console.log(localStorage[`${pageTitle}`]);
         console.log(pageTitle, localStorage);
