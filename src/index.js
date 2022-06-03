@@ -1,5 +1,5 @@
 import { lightMode } from './lightMode';
-import { newItem } from './newItem';
+import { oldItems, newItem } from './newItem';
 import { home } from './home';
 import { today } from './today';
 import { todoInput } from './todoInput';
@@ -26,6 +26,9 @@ console.log("this is working still");
 // ]
 
 // document.getElementById('todo-date').value = new Date().toDateInputValue();
+
+//input old items
+oldItems();
 
 //input
 todoInput();

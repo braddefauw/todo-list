@@ -1,3 +1,7 @@
+import { newProjList, grouped } from "./newItem";
+
+let projList = [];
+
 const addProject = () => {
     let index = 0;
     
@@ -34,11 +38,16 @@ const addProject = () => {
             addProjPopup.style.display = "none";
             newProj.dataset.indexNumber = index;
             index++;
+            let projTextUpper = projectText.toUpperCase();
+            projList.push(projTextUpper);
             projectTextDiv.addEventListener("click", function(){
                 title.innerHTML = projectText;
                 newTodo.style.display = "flex";
                 addInput.value = "";
                 main.innerHTML = "";
+                // newProjList.forEach(function(item, index){
+                //     main.appendChild(item);
+                // })
             })
             xBtn.addEventListener("click", function(){
                 this.parentElement.remove();
@@ -51,4 +60,4 @@ const addProject = () => {
     })
 }
 
-export { addProject };
+export { addProject, projList };
