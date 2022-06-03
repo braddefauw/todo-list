@@ -185,7 +185,7 @@ const addProject = () => {
                                     }
 
                                     if(projectsList.hasChildNodes()){
-                                        newProjList.push(newItem);
+                                        newProjList.push(newProjList);
                                     }
                                 }
                             }
@@ -199,8 +199,17 @@ const addProject = () => {
                 // })
             })
             xBtn.addEventListener("click", function(){
+                pageTitle = projectText;
                 this.parentElement.remove();
                 addInput.value = "";
+                let index = parseInt(newProj.dataset.indexNumber);
+                console.log(index, index>-1);
+                if(index > -1){
+                    projList.splice(index, 1)
+                }
+                console.log(projList)
+                localStorage.setItem(`projList`, JSON.stringify(projList));
+                console.log(localStorage);
             })
         }
     })

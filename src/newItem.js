@@ -106,7 +106,8 @@ const newItem = () => {
         }
 
         if(projectsList.hasChildNodes()){
-            newProjList.push(newItem);
+            todoArr.push({todoValue, todoDate});
+            newProjList.push({todoValue, todoDate});
         }
 
         // if(projectsList.hasChildNodes()){
@@ -125,7 +126,11 @@ const newItem = () => {
         // }
         // console.log(pageTitle, todoArr);
         pageTitle = title.innerText;
-        localStorage.setItem(`${pageTitle}`, JSON.stringify(todoArr));
+        if(pageTitle == "HOME"){
+            localStorage.setItem(`${pageTitle}`, JSON.stringify(todoArr));
+        }else{
+            localStorage.setItem(`${pageTitle}`, JSON.stringify(newProjList));
+        }
         // console.log(localStorage[`${pageTitle}`]);
         console.log(pageTitle, localStorage);
 
