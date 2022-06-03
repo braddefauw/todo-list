@@ -129,10 +129,11 @@ const newItem = () => {
         if(pageTitle == "HOME"){
             localStorage.setItem(`${pageTitle}`, JSON.stringify(todoArr));
         }else{
+            // console.log(newProjList);
             localStorage.setItem(`${pageTitle}`, JSON.stringify(newProjList));
         }
         // console.log(localStorage[`${pageTitle}`]);
-        console.log(pageTitle, localStorage);
+        // console.log(newProjList, pageTitle, localStorage);
 
         todoInput.value = "";
         date.value = "";

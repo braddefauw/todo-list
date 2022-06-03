@@ -90,7 +90,7 @@ const addProject = () => {
                     }
 
                     if(projectsList.hasChildNodes()){
-                        newProjList.push(newItem);
+                        newProjList.push({todoValue, todoDate});
                     }
                     let projectTextDiv = document.querySelector(".new-project");
                     projectTextDiv.addEventListener("click", function(){
@@ -102,11 +102,13 @@ const addProject = () => {
                         let projTextUpper = projectText.toUpperCase();
                         let oldContent = JSON.parse(localStorage[`${projTextUpper}`]);
                         for (const [key, value] of Object.entries(oldContent)) {
-                            console.log(value.todoValue, value.todoDate);
+                            // console.log(value.todoValue, value.todoDate);
                             let newItem = item(value.todoValue, value.todoDate);
                             todoList.appendChild(newItem);
                         }
                     })
+                    localStorage.setItem(`${pageTitle}`, JSON.stringify(newProjList));
+                    // console.log(pageTitle, newProjList);
                 }
             }
         }
@@ -156,10 +158,11 @@ const addProject = () => {
                 let projTextUpper = projectText.toUpperCase();
                 let oldContent = JSON.parse(localStorage[`${projTextUpper}`]);
                 for (const [key, value] of Object.entries(oldContent)) {
-                    console.log("test", value.todoValue, value.todoDate);
+                    // console.log(value.todoValue, value.todoDate);
                     let newItem = item(value.todoValue, value.todoDate);
                     let todoList = document.querySelector("#todo-list");
                     todoList.appendChild(newItem);
+                    console.log("test");
                 }
                 // let oldList = JSON.parse(localStorage.getItem(`${projTextUpper}`))
                 // if(!oldList){
