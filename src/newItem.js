@@ -137,4 +137,4 @@ const newItem = () => {
     })
 }
 
-export { oldItems, newItem, todayList, weekList, newProjList, grouped };
+export { oldItems, newItem, todayList, weekList, newProjList, todoArr };

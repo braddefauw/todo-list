@@ -1,5 +1,8 @@
-let index = 1;
+import { todoArr } from './newItem';
+
+let index = 0;
 let todoListItems = [];
+let pageTitle = title.innerText;
 
 const item = (title, due) => {
     let todoItem = document.createElement("div");
@@ -36,7 +39,10 @@ const item = (title, due) => {
    todoItem.appendChild(remove);
 
    remove.addEventListener("click", function(){
-       todoItem.remove();
+        todoItem.remove();
+        console.log(todoArr);
+        // localStorage.setItem(`${pageTitle}`, JSON.stringify(todoArr));
+        // console.log(localStorage[`${pageTitle}`]);
    })
 
     todoItem.dataset.indexNumber = index;
