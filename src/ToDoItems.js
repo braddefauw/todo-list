@@ -60,6 +60,7 @@ const item = (title, due) => {
 
 const todoItems = () => {
     let todoList = document.querySelector("#todo-list");
+    todoList.innerHTML = "";
     todoListItems.forEach(function(item, index){
         todoList.appendChild(item);
     })   
