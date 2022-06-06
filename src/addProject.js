@@ -23,6 +23,8 @@ const addProject = () => {
     let projectsList = document.querySelector(".projects-list");
 
    for(let proj of oldProjList){
+        proj = proj.projectText;
+        console.log(proj);
         //create new project div + class
         let newProj = document.createElement("div");
         newProj.classList. add("new-project");
@@ -47,71 +49,67 @@ const addProject = () => {
         index++;
         //convert project text to uppercase and push to project list
         let projTextUpper = projectText.toUpperCase();
-        projList.push(projTextUpper);
+        projList.push({projectText});
         pageTitle = projectText;
         title.innerHTML = projectText;
         newTodo.style.display = "flex";
         addInput.value = "";
         main.innerHTML = "";
-        for (const [key, value] of Object.entries(localStorage)) {
-            if(key == projTextUpper){
-                let oldList = JSON.parse(localStorage.getItem(`${projTextUpper}`))
-                for(let listItem of oldList){
-                    let title = document.querySelector("#title");
-                    pageTitle = title.innerText;
-                    let todoValue, todoDate, today;
-                    
-                    todoValue = listItem.todoValue;
+        for(var i = 0; i < oldProjList.length; i++){
+            if(proj == oldProjList[i].projectText){
+                let oldList = JSON.parse(localStorage.getItem(`${projTextUpper}`));
+                let title = document.querySelector("#title");
+                pageTitle = proj;
+                let todoValue, todoDate, today;
+                todoValue = oldList[i].todoValue;
 
-                    //get today's date
-                    today = moment().format('L');
-                    todoDate = listItem.todoDate;
-                    todoArr.push({todoValue, todoDate});
-                    let year = todoDate.substr(0, 4);
-                    let month = todoDate.substr(5, 2);
-                    let day = todoDate.substr(8, 2);
-                    let formattedDate = `${month}/${day}/${year}`
+                // get today's date
+                today = moment().format('L');
+                todoDate = oldList[i].todoDate;
+                todoArr.push({todoValue, todoDate});
+                let year = todoDate.substr(0, 4);
+                let month = todoDate.substr(5, 2);
+                let day = todoDate.substr(8, 2);
+                let formattedDate = `${month}/${day}/${year}`
 
-                    let todoList = document.querySelector("#todo-list");
-                    let newItem = item(todoValue, todoDate);
-                    todoList.appendChild(newItem);
-                    // console.log(todoList.childNodes);
-                    // newProjItems.push(newItem);
+                let todoList = document.querySelector("#todo-list");
+                let newItem = item(todoValue, todoDate);
+                todoList.appendChild(newItem);
+                // console.log(todoList.childNodes);
+                // newProjItems.push(newItem);
 
-                    if(formattedDate === today){
-                        todayList.push(newItem);
-                    }
-
-                    let sevenDaysAgo = moment().subtract(7, 'days').calendar();
-                    let sevenDaysFromNow = moment().add(7, 'days').calendar();
-                    let isThisWeek = (formattedDate > sevenDaysAgo && formattedDate < sevenDaysFromNow);
-                    if(isThisWeek){
-                        weekList.push(newItem);
-                    }
-
-                    if(projectsList.hasChildNodes()){
-                        newProjList.push({todoValue, todoDate});
-                    }
-                    let projectTextDiv = document.querySelector(".new-project");
-                    projectTextDiv.addEventListener("click", function(){
-                        pageTitle = projectText;
-                        title.innerHTML = projectText;
-                        newTodo.style.display = "flex";
-                        addInput.value = "";
-                        main.innerHTML = "";
-                        let projTextUpper = projectText.toUpperCase();
-                        let oldContent = JSON.parse(localStorage[`${projTextUpper}`]);
-                        for (const [key, value] of Object.entries(oldContent)) {
-                            // console.log(value.todoValue, value.todoDate);
-                            let newItem = item(value.todoValue, value.todoDate);
-                            todoList.appendChild(newItem);
-                        }
-                    })
-                    localStorage.setItem(`${pageTitle}`, JSON.stringify(newProjList));
-                    // console.log(pageTitle, newProjList);
+                if(formattedDate === today){
+                    todayList.push(newItem);
                 }
+
+                let sevenDaysAgo = moment().subtract(7, 'days').calendar();
+                let sevenDaysFromNow = moment().add(7, 'days').calendar();
+                let isThisWeek = (formattedDate > sevenDaysAgo && formattedDate < sevenDaysFromNow);
+                if(isThisWeek){
+                    weekList.push(newItem);
+                }
+
+                if(projectsList.hasChildNodes()){
+                    newProjList.push({todoValue, todoDate});
+                }
+                localStorage.setItem(`${pageTitle}`, JSON.stringify(newProjList));
             }
         }
+        projectTextDiv.addEventListener("click", function(){
+            pageTitle = projectText;
+            title.innerHTML = projectText;
+            newTodo.style.display = "flex";
+            addInput.value = "";
+            main.innerHTML = "";
+            let projTextUpper = projectText.toUpperCase();
+            let oldContent = JSON.parse(localStorage[`${projTextUpper}`]);
+            for (const [key, value] of Object.entries(oldContent)) {
+                // console.log(value.todoValue, value.todoDate);
+                let todoList = document.querySelector("#todo-list");
+                let newItem = item(value.todoValue, value.todoDate);
+                todoList.appendChild(newItem);
+            }
+        })
     }
 
     projectBtn.addEventListener("click", function(){
@@ -145,10 +143,10 @@ const addProject = () => {
             index++;
             //convert project text to uppercase and push to project list
             let projTextUpper = projectText.toUpperCase();
-            projList.push(projectText);
+            projList.push({projectText});
+            console.log(projList);
             localStorage.setItem(`projList`, JSON.stringify(projList));
-            console.log(localStorage);
-
+            // console.log(localStorage);
             projectTextDiv.addEventListener("click", function(){
                 pageTitle = projectText;
                 title.innerHTML = projectText;

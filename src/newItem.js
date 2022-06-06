@@ -17,7 +17,7 @@ import moment from 'moment';
 // }
 
 let oldHomeList= JSON.parse(localStorage.getItem('HOME') || "[]");
-console.log(oldHomeList);
+console.log(localStorage, oldHomeList);
 
 let todoArr = [];
 let todayList = [];
@@ -107,6 +107,8 @@ const newItem = () => {
 
         if(projectsList.hasChildNodes()){
             todoArr.push({todoValue, todoDate});
+            pageTitle = title.innerText;
+            // console.log(pageTitle, todoList.hasChildNodes());
             newProjList.push({todoValue, todoDate});
         }
 
@@ -132,6 +134,7 @@ const newItem = () => {
             // console.log(newProjList);
             localStorage.setItem(`${pageTitle}`, JSON.stringify(newProjList));
         }
+        console.log(localStorage);
         // console.log(localStorage[`${pageTitle}`]);
         // console.log(newProjList, pageTitle, localStorage);
 
