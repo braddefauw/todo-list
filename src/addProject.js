@@ -92,8 +92,7 @@ const addProject = () => {
                     newProjList.push({todoValue, todoDate});
                 }
                 pageTitle = pageTitle.toUpperCase();
-                console.log(pageTitle);
-                localStorage.setItem(`${pageTitle}`, JSON.stringify(newProjList));
+                // localStorage.setItem(`${pageTitle}`, JSON.stringify(newProjList));
             }
         }
         projectTextDiv.addEventListener("click", function(){
@@ -146,7 +145,6 @@ const addProject = () => {
             //convert project text to uppercase and push to project list
             let projTextUpper = projectText.toUpperCase();
             projList.push({projectText});
-            console.log(projList);
             localStorage.setItem(`projList`, JSON.stringify(projList));
             // console.log(localStorage);
             projectTextDiv.addEventListener("click", function(){

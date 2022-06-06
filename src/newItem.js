@@ -133,6 +133,7 @@ const newItem = () => {
         }else{
             // console.log(newProjList);
             localStorage.setItem(`${pageTitle}`, JSON.stringify(newProjList));
+            console.log(localStorage)
         }
         // console.log(localStorage);
         // console.log(localStorage[`${pageTitle}`]);
