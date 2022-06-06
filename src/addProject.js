@@ -136,6 +136,7 @@ const addProject = () => {
             xBtn.innerText = "X";
             xBtn.classList.add("x-button");
             newProj.appendChild(xBtn);
+            addInput.value = "";
             //hide add project popup
             addProjPopup.style.display = "none";
             //add new project data index number
