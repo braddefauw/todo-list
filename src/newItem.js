@@ -17,7 +17,7 @@ import moment from 'moment';
 // }
 
 let oldHomeList= JSON.parse(localStorage.getItem('HOME') || "[]");
-console.log(localStorage, oldHomeList);
+// console.log(localStorage, oldHomeList);
 
 let todoArr = [];
 let todayList = [];
@@ -134,7 +134,7 @@ const newItem = () => {
             // console.log(newProjList);
             localStorage.setItem(`${pageTitle}`, JSON.stringify(newProjList));
         }
-        console.log(localStorage);
+        // console.log(localStorage);
         // console.log(localStorage[`${pageTitle}`]);
         // console.log(newProjList, pageTitle, localStorage);
 

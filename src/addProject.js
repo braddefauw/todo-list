@@ -24,7 +24,6 @@ const addProject = () => {
 
    for(let proj of oldProjList){
         proj = proj.projectText;
-        console.log(proj);
         //create new project div + class
         let newProj = document.createElement("div");
         newProj.classList. add("new-project");
@@ -92,6 +91,8 @@ const addProject = () => {
                 if(projectsList.hasChildNodes()){
                     newProjList.push({todoValue, todoDate});
                 }
+                pageTitle = pageTitle.toUpperCase();
+                console.log(pageTitle);
                 localStorage.setItem(`${pageTitle}`, JSON.stringify(newProjList));
             }
         }
@@ -161,7 +162,6 @@ const addProject = () => {
                     let newItem = item(value.todoValue, value.todoDate);
                     let todoList = document.querySelector("#todo-list");
                     todoList.appendChild(newItem);
-                    console.log("test");
                 }
                 // let oldList = JSON.parse(localStorage.getItem(`${projTextUpper}`))
                 // if(!oldList){
