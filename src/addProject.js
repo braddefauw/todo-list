@@ -61,7 +61,7 @@ const addProject = () => {
                 let title = document.querySelector("#title");
                 pageTitle = proj;
                 let todoValue, todoDate, today;
-                console.log(oldList, i, oldList);
+                // console.log(oldList, i, oldList);
                 todoValue = oldList.todoValue;
 
                 // get today's date
@@ -74,7 +74,6 @@ const addProject = () => {
                     let month = todoDate.substr(5, 2);
                     let day = todoDate.substr(8, 2);
                     formattedDate = `${month}/${day}/${year}`;
-                    return formattedDate;
                 }
 
                 let todoList = document.querySelector("#todo-list");

@@ -17,7 +17,7 @@ import moment from 'moment';
 // }
 
 let oldHomeList= JSON.parse(localStorage.getItem('HOME') || "[]");
-// console.log(localStorage, oldHomeList);
+// console.log(oldHomeList);
 
 let todoArr = [];
 let todayList = [];
@@ -27,16 +27,19 @@ let newProjList = [];
 let pageTitle;
 
 const oldItems = () => {
-    for(let listItem of oldHomeList){
+    for (var i = 0; i < oldHomeList.length; i++){
+        const isEmpty = Object.keys(oldHomeList[i]).length === 0;
+        // console.log(isEmpty); 
+        if (isEmpty) { continue; }
         let title = document.querySelector("#title");
         pageTitle = title.innerText;
         let todoValue, todoDate, today;
-    
-        todoValue = listItem.todoValue;
+        // console.log(oldHomeList, i, oldHomeList[i].todoValue);
+        todoValue = oldHomeList[i].todoValue;
     
         //get today's date
         today = moment().format('L');
-        todoDate = listItem.todoDate;
+        todoDate = oldHomeList[i].todoDate;
         todoArr.push({todoValue, todoDate});
         let formattedDate;
         if(todoDate){
@@ -44,7 +47,6 @@ const oldItems = () => {
             let month = todoDate.substr(5, 2);
             let day = todoDate.substr(8, 2);
             formattedDate = `${month}/${day}/${year}`;
-            return formattedDate;
         }
     
         let todoList = document.querySelector("#todo-list");
