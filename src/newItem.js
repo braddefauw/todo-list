@@ -17,7 +17,7 @@ import moment from 'moment';
 // }
 
 let oldHomeList= JSON.parse(localStorage.getItem('HOME') || "[]");
-console.log(localStorage, oldHomeList);
+// console.log(localStorage, oldHomeList);
 
 let todoArr = [];
 let todayList = [];
@@ -38,10 +38,14 @@ const oldItems = () => {
         today = moment().format('L');
         todoDate = listItem.todoDate;
         todoArr.push({todoValue, todoDate});
-        let year = todoDate.substr(0, 4);
-        let month = todoDate.substr(5, 2);
-        let day = todoDate.substr(8, 2);
-        let formattedDate = `${month}/${day}/${year}`
+        let formattedDate;
+        if(todoDate){
+            let year = todoDate.substr(0, 4);
+            let month = todoDate.substr(5, 2);
+            let day = todoDate.substr(8, 2);
+            formattedDate = `${month}/${day}/${year}`;
+            return formattedDate;
+        }
     
         let todoList = document.querySelector("#todo-list");
         let newItem = item(todoValue, todoDate);
@@ -133,18 +137,20 @@ const newItem = () => {
             // console.log(newProjList);
             let newArr = [];
             let oldItems = JSON.parse(localStorage.getItem(`${pageTitle}`));
-            for (var i = 0; i < oldItems.length; i++) {
-                console.log(oldItems[i].todoValue, oldItems[i].todoDate);
-                let todoValue = oldItems[i].todoValue;
-                let todoDate = oldItems[i].todoDate;
-                newArr.push({todoValue, todoDate})
+            if(oldItems){
+                for (var i = 0; i < oldItems.length; i++) {
+                    console.log(oldItems[i].todoValue, oldItems[i].todoDate);
+                    let todoValue = oldItems[i].todoValue;
+                    let todoDate = oldItems[i].todoDate;
+                    newArr.push({todoValue, todoDate})
+                }
             }
             newArr.push({todoValue, todoDate});
+            // console.log(pageTitle);
             localStorage.setItem(`HOME`, JSON.stringify(todoArr));
             localStorage.setItem(`${pageTitle}`, JSON.stringify(newArr));
         }
         // console.log(todoArr, newProjList);
-        // console.log(localStorage);
         // console.log(localStorage[`${pageTitle}`]);
         // console.log(newProjList, pageTitle, localStorage);
 

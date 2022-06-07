@@ -56,20 +56,26 @@ const addProject = () => {
         main.innerHTML = "";
         for(var i = 0; i < oldProjList.length; i++){
             if(proj == oldProjList[i].projectText){
+                // console.log(oldProjList, projTextUpper)
                 let oldList = JSON.parse(localStorage.getItem(`${projTextUpper}`));
                 let title = document.querySelector("#title");
                 pageTitle = proj;
                 let todoValue, todoDate, today;
-                todoValue = oldList[i].todoValue;
+                console.log(oldList, i, oldList);
+                todoValue = oldList.todoValue;
 
                 // get today's date
                 today = moment().format('L');
-                todoDate = oldList[i].todoDate;
+                todoDate = oldList.todoDate;
                 todoArr.push({todoValue, todoDate});
-                let year = todoDate.substr(0, 4);
-                let month = todoDate.substr(5, 2);
-                let day = todoDate.substr(8, 2);
-                let formattedDate = `${month}/${day}/${year}`
+                let formattedDate;
+                if(todoDate){
+                    let year = todoDate.substr(0, 4);
+                    let month = todoDate.substr(5, 2);
+                    let day = todoDate.substr(8, 2);
+                    formattedDate = `${month}/${day}/${year}`;
+                    return formattedDate;
+                }
 
                 let todoList = document.querySelector("#todo-list");
                 let newItem = item(todoValue, todoDate);
