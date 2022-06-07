@@ -131,10 +131,19 @@ const newItem = () => {
             localStorage.setItem(`${pageTitle}`, JSON.stringify(todoArr));
         }else{
             // console.log(newProjList);
+            let newArr = [];
+            let oldItems = JSON.parse(localStorage.getItem(`${pageTitle}`));
+            for (var i = 0; i < oldItems.length; i++) {
+                console.log(oldItems[i].todoValue, oldItems[i].todoDate);
+                let todoValue = oldItems[i].todoValue;
+                let todoDate = oldItems[i].todoDate;
+                newArr.push({todoValue, todoDate})
+            }
+            newArr.push({todoValue, todoDate});
             localStorage.setItem(`HOME`, JSON.stringify(todoArr));
-            localStorage.setItem(`${pageTitle}`, JSON.stringify(newProjList));
+            localStorage.setItem(`${pageTitle}`, JSON.stringify(newArr));
         }
-        console.log(todoArr, newProjList);
+        // console.log(todoArr, newProjList);
         // console.log(localStorage);
         // console.log(localStorage[`${pageTitle}`]);
         // console.log(newProjList, pageTitle, localStorage);
