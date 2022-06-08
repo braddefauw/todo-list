@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](blob:https://imgur.com/fcb7fa74-8c65-4b15-92ef-661d6cfdf60e)
+![](https://awesomescreenshot.s3.amazonaws.com/image/2827546/28395506-2994b248eda49058fd2a7a0043c41303.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20220608%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220608T015323Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=511b363749fddcda120c7a617d4e4a79c655f6aba46c795ec8086e0b19d9b0a9)
 
 ### Links
 
