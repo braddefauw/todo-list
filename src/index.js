@@ -45,6 +45,7 @@ function myFunction() {
       let todoValue, todoDate, today;
       // console.log(oldHomeList, i, oldHomeList[i].todoValue);
       todoValue = oldHomeList[i].todoValue;
+      todoDate = oldHomeList[i].todoDate;
   
       let todoList = document.querySelector("#todo-list");
       let newItem = item(todoValue, todoDate);
