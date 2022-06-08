@@ -48,7 +48,6 @@ function myFunction() {
       let todoList = document.querySelector("#todo-list");
       let newItem = item(todoValue, todoDate);
       todoList.appendChild(newItem);
-      todoListItems.push(newItem);
   }
 }
 
