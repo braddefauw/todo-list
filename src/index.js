@@ -36,7 +36,8 @@ function myFunction() {
   let todoList = document.getElementById("todo-list");
   todoList.innerHTML = "";
   let oldHomeList= JSON.parse(localStorage.getItem('HOME') || "[]");
-  for (var i = 0; i < oldHomeList.length; i++){
+  if(oldHomeList){
+    for (var i = 0; i < oldHomeList.length; i++){
       const isEmpty = Object.keys(oldHomeList[i]).length === 0;
       // console.log(isEmpty); 
       if (isEmpty) { continue; }
@@ -48,6 +49,7 @@ function myFunction() {
       let todoList = document.querySelector("#todo-list");
       let newItem = item(todoValue, todoDate);
       todoList.appendChild(newItem);
+    }
   }
 }
 
