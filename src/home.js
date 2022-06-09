@@ -1,8 +1,8 @@
 import { todoItems } from "./ToDoItems";
 
 const home = () => {
-    let homeBtn = document.getElementById("home");
-    let newTodo = document.querySelector("#new-todo");
+    const homeBtn = document.getElementById("home");
+    const newTodo = document.querySelector("#new-todo");
     let title = document.querySelector("#title");
     let todoList = document.getElementById("todo-list");
     homeBtn.addEventListener("click", function(){
