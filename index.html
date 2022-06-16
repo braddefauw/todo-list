@@ -32,7 +32,10 @@
                 <div class="projects-list"></div>
                 <h4 class="add-proj">+ Add Project</h4>
                 <div class="add-project-popup">
-                    <input type="text" class="add-proj-input">
+                    <form>
+                        <label for="proj-input"></label>
+                        <input type="text" class="add-proj-input" name="proj-input">
+                    </form>
                     <div class="add-proj-btns">
                         <div class="new-proj-add">Add</div>
                         <div class="new-proj-cancel">Cancel</div>
@@ -43,7 +46,21 @@
         </div>
         <div class="main-content">
             <div id="title">HOME</div>
-            <div id="new-todo"></div>
+            <div id="new-todo">
+                <div class="new-todo-text">
+                    <label id="todo-input">
+                        <input type="text" name="todo-input" name="todo-input" placeholder="Create a new todo...">
+                    </label>
+                    <label id="todo-date">
+                        <input type="date">
+                    </label>
+                    <!-- <label>
+                        <input type="date" class="todo-date" name="todo-date" aria-labelledby="todo-date">
+                    </label> -->
+                    <button id="submit">Submit</button>
+                    <button id="cancel">Cancel</button>
+                </div>
+            </div>
             <div id="todo-list"></div>
         </div>
     </div>
