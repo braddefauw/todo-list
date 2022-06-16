@@ -35,23 +35,9 @@ function myFunction() {
   title.innerText = "HOME";
   let todoList = document.getElementById("todo-list");
   todoList.innerHTML = "";
-  let oldHomeList= JSON.parse(localStorage.getItem('HOME') || "[]");
-  if(oldHomeList){
-    for (var i = 0; i < oldHomeList.length; i++){
-      const isEmpty = Object.keys(oldHomeList[i]).length === 0;
-      // console.log(isEmpty); 
-      if (isEmpty) { continue; }
-      let title = document.querySelector("#title");
-      let todoValue, todoDate, today;
-      // console.log(oldHomeList, i, oldHomeList[i].todoValue);
-      todoValue = oldHomeList[i].todoValue;
-      todoDate = oldHomeList[i].todoDate;
-  
-      let todoList = document.querySelector("#todo-list");
-      let newItem = item(todoValue, todoDate);
-      todoList.appendChild(newItem);
-    }
-  }
+  todoListItems.forEach(function(item, index){
+    todoList.appendChild(item);
+  })
 }
 
 //input old items
