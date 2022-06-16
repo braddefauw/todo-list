@@ -12,7 +12,7 @@
     <link rel="icon" href="./images/check-bold.svg">
 </head>
 <body>
-    <div class="header" role="header">
+    <div class="header">
         <div id="overlay-title">
             <div class="text-title">
                 TODO
@@ -22,15 +22,15 @@
     </div>
     <div class="background">
         <div class="sidebar">
-            <div class="dates" role="dates">
+            <div class="dates">
                 <h3 id="home">Home</h3>
                 <h3 class="today">Today</h3>
                 <h3 class="week">Week</h3>
             </div>
             <div class="projects">
-                <h1 role="projects">Projects</h1>
+                <h1>Projects</h1>
                 <div class="projects-list"></div>
-                <div class="add-proj" role="add-project">+ Add Project</div>
+                <div class="add-proj">+ Add Project</div>
                 <div class="add-project-popup">
                     <form>
                         <label for="proj-input"></label>
@@ -45,13 +45,13 @@
             </div>
         </div>
         <div class="main-content">
-            <div id="title" role="title">HOME</div>
+            <div id="title">HOME</div>
             <div id="new-todo">
                 <div class="new-todo-text">
-                    <label id="todo-input" role="todo-input">
+                    <label id="todo-input">
                         <input type="text" name="todo-input" id="todo-input-text" placeholder="Create a new todo..." aria-label="Create a new to do">
                     </label>
-                    <label for="todo-date-value" id="todo-date" role="todo-date">
+                    <label for="todo-date-value" id="todo-date">
                         <input type="date" id="todo-date-value" name="todo-date-value" aria-label="Enter to do date value">
                     </label>
                     <button id="submit">Submit</button>
