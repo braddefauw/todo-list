@@ -35,6 +35,7 @@ const item = (title, due) => {
     date.setAttribute("class", "todo-date");
     date.setAttribute("name", "todo-date");
     date.setAttribute("value", due);
+    date.setAttribute("aria-label", "Enter date");
     dateLabel.appendChild(date);
 
    let remove = document.createElement("p");
