@@ -51,6 +51,7 @@ const item = (title, due) => {
         }
         // console.log(todoArr);
         todoItem.remove();
+        console.log(index, pageTitle, todoArr);
         localStorage.setItem(`${pageTitle}`, JSON.stringify(todoArr));
         // console.log(localStorage);
         // console.log(localStorage[`${pageTitle}`]);
