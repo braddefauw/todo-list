@@ -26,12 +26,16 @@ const item = (title, due) => {
     titleText.innerText = title;
     todoItem.appendChild(titleText);
 
+    let dateLabel = document.createElement("label");
+    dateLabel.classList.add("todo-date");
+    todoItem.appendChild(dateLabel);
+
     let date = document.createElement("input");
     date.setAttribute("type", "date");
-    date.setAttribute("id", "todo-date");
+    date.setAttribute("class", "todo-date");
     date.setAttribute("name", "todo-date");
     date.setAttribute("value", due);
-    todoItem.appendChild(date);
+    dateLabel.appendChild(date);
 
    let remove = document.createElement("p");
    remove.innerText = "X";

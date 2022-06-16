@@ -6,12 +6,20 @@ const todoInput = () => {
     newTodoText.classList.add("new-todo-text");
     newTodo.appendChild(newTodoText);
 
+    let todoLabel = document.createElement("label");
+    todoLabel.setAttribute("for", "todo-input");
+    newTodoText.appendChild(todoLabel);
+
     let todoInput = document.createElement("input");
     todoInput.setAttribute("type", "text");
     todoInput.setAttribute("id", "todo-input");
     todoInput.setAttribute("name", "todo-input");
     todoInput.setAttribute("placeholder", "Create a new todo... ");
     newTodoText.appendChild(todoInput);
+
+    let dateLabel = document.createElement("label");
+    dateLabel.setAttribute("for", "todo-date");
+    newTodoText.appendChild(dateLabel);
 
     let todoDate = document.createElement("input");
     todoDate.setAttribute("type", "date");

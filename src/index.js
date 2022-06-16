@@ -2,7 +2,7 @@ import { lightMode } from './lightMode';
 import { oldItems, newItem } from './newItem';
 import { home } from './home';
 import { today } from './today';
-import { todoInput } from './todoInput';
+// import { todoInput } from './todoInput';
 import { item, todoListItems, todoItems } from './ToDoItems';
 import { week } from './week';
 import { addProject } from './addProject';
@@ -58,7 +58,7 @@ function myFunction() {
 oldItems();
 
 //input
-todoInput();
+// todoInput();
 
 //bring in todo items
 todoItems();
