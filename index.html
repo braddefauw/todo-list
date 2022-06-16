@@ -30,7 +30,7 @@
             <div class="projects">
                 <h1>Projects</h1>
                 <div class="projects-list"></div>
-                <h4 class="add-proj">+ Add Project</h4>
+                <div class="add-proj">+ Add Project</div>
                 <div class="add-project-popup">
                     <form>
                         <label for="proj-input"></label>
@@ -51,12 +51,9 @@
                     <label id="todo-input">
                         <input type="text" name="todo-input" id="todo-input-text" placeholder="Create a new todo...">
                     </label>
-                    <label id="todo-date">
-                        <input type="date" id="todo-date-value">
+                    <label for="todo-date-value" id="todo-date">
+                        <input type="date" id="todo-date-value" name="todo-date-value">
                     </label>
-                    <!-- <label>
-                        <input type="date" class="todo-date" name="todo-date" aria-labelledby="todo-date">
-                    </label> -->
                     <button id="submit">Submit</button>
                     <button id="cancel">Cancel</button>
                 </div>
@@ -65,7 +62,7 @@
         </div>
     </div>
     <footer>
-        <h5 class="fh5">Copyright © 2022 braddefauw <a href="https://github.com/braddefauw/todo-list"><img src="./images/icons8-github.svg" class="footer-img" alt="Github logo"/></a></h5>
+        <div class="fh5">Copyright © 2022 braddefauw <a href="https://github.com/braddefauw/todo-list"><img src="./images/icons8-github.svg" class="footer-img" alt="Github logo"/></a></div>
     </footer>
     <script src="main.js"></script>
 </body>

@@ -82,7 +82,7 @@ body {
     padding: 1rem;
 }
 
-.projects h4 {
+.projects .add-proj {
     padding: 1rem;
     width: 50%;
     margin: 0;
@@ -141,11 +141,13 @@ body {
 }
 
 .new-proj-add {
-    background: green;
+    background: lightgreen;
+    color: black;
 }
 
 .new-proj-cancel {
-    background: red;
+    background: #fda5a5;
+    color: black;
 }
 
 .new-project {
@@ -169,7 +171,7 @@ body {
     /* Lowering the shadow */
 }
 
-.dates > *:hover, .projects h4:hover, .projects-list > *:hover {
+.dates > *:hover, .projects .add-proj:hover, .projects-list > *:hover {
     background: gray;
     border-radius: 1rem;
 }
@@ -274,7 +276,8 @@ input:focus {
 }
 
 #submit {
-    background: green;
+    background: lightgreen;
+    color: black;
 }
 
 #submit:active, #cancel:active {
@@ -285,7 +288,8 @@ input:focus {
 }
 
 #cancel {
-    background: red;
+    background: #fda5a5;
+    color: black;
 }
 
 .icon {
@@ -345,7 +349,7 @@ input:focus {
     display: none;
 }
 
-footer, footer h5 {
+footer, footer div {
     display: flex;
     justify-content: center;
     align-items: center;
