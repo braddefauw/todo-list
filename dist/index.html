@@ -34,7 +34,7 @@
                 <div class="add-project-popup">
                     <form>
                         <label for="proj-input"></label>
-                        <input type="text" class="add-proj-input" name="proj-input">
+                        <input type="text" class="add-proj-input" name="proj-input" aria-label="Enter project name">
                     </form>
                     <div class="add-proj-btns">
                         <div class="new-proj-add">Add</div>
@@ -49,10 +49,10 @@
             <div id="new-todo">
                 <div class="new-todo-text">
                     <label id="todo-input">
-                        <input type="text" name="todo-input" id="todo-input-text" placeholder="Create a new todo...">
+                        <input type="text" name="todo-input" id="todo-input-text" placeholder="Create a new todo..." aria-label="Create a new to do">
                     </label>
                     <label for="todo-date-value" id="todo-date">
-                        <input type="date" id="todo-date-value" name="todo-date-value">
+                        <input type="date" id="todo-date-value" name="todo-date-value" aria-label="Enter to do date value">
                     </label>
                     <button id="submit">Submit</button>
                     <button id="cancel">Cancel</button>
