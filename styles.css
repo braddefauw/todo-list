@@ -185,7 +185,7 @@ body {
 #title {
     font-size: 2rem;
     text-decoration: underline;
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
     text-transform: uppercase;
 }
 
@@ -197,7 +197,7 @@ body {
     width: 60%;
     height: 10%;
     background: rgba(77, 80, 102, 0.5);
-    margin-top: 5%;
+    margin-top: 2.5%;
     border-radius: 0.5rem;
     display: flex;
     justify-content: center;
@@ -234,6 +234,12 @@ body {
     margin-left: auto;
 }
 
+.new-todo-text label {
+    height: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
 #todo-input {
     margin-left: 1rem;
     width: 300px;
@@ -243,6 +249,7 @@ body {
 #todo-input input, #todo-date input {
     font-family: inherit;
     background: inherit;
+    font-size: inherit;
     border: none;
     color: lightgray;
 }
