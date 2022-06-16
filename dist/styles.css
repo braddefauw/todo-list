@@ -252,7 +252,7 @@ input:focus {
     color: lightgray;
 }
 
-#todo-input::placeholder {
+#todo-input input::placeholder {
     color: lightgray;
 }
 

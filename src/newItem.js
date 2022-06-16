@@ -72,9 +72,9 @@ const oldItems = () => {
 }
 
 const newItem = () => {
-    let todoInput = document.getElementById("todo-input");
+    let todoInput = document.getElementById("todo-input-text");
     let submitBtn = document.getElementById("submit");
-    let date = document.getElementById("todo-date");
+    let date = document.getElementById("todo-date-value");
     let title = document.querySelector("#title");
     let todoValue, todoDate, today;
     let idx = 0;
